@@ -1,0 +1,199 @@
+*
+{
+  box-sizing:border-box;
+}
+
+html
+{
+  height: 100%;
+}
+
+html, css{
+  touch-action:none;
+}
+
+body
+{
+  background:#cccccc;
+  height: 100%;
+}
+
+.controller
+{
+  display: flex;
+  height: 90vh;
+}
+
+
+.stick
+{
+    flex:1;
+  top:50vh;
+}
+
+.stickpad
+{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top:50vh;
+  height: 220px;
+  width:220px;
+  background:#444444;
+  border-radius: 10px;
+}
+.pad1
+{
+  left:10vw;
+}
+.pad2
+{
+  right:10vw;
+}
+
+.bar
+{
+  text-align: center;
+}
+
+.bar input[type="range"]
+{
+  -webkit-appearance: none;
+  cursor:pointer;
+  background:gray;
+  height:60px;
+  border-radius:10px;
+  border:solid black 2px;
+  outline:0;
+}
+::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 80px;
+  width: 40px;
+  background: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.go_back
+{
+  transform:rotate(270deg);
+  width:200px;
+}
+.left_right
+{
+  transform:rotate(180deg);
+  width:200px;
+}
+
+.stickpad
+{
+  flex:1;
+  position: absolute;
+}
+
+.led_label
+{
+  font-size:20px;
+}
+
+.control
+{
+  zoom:200%;
+  margin-left:20px;
+}
+.control span
+{
+  position:relative;
+  bottom:10px;
+  right:5px;
+}
+
+#cover
+{
+  position: absolute;
+  top:0vh;
+  background:rgba(200,200,200,0.7);
+  height: 110vh;
+  width:95vw;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#connect_dialog
+{
+  position: absolute;
+  margin-right: auto;
+  margin-top:auto;
+  background:white;
+  width:200px;
+  height:100px;
+  text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#connect_dialog button
+{
+  font-size: 20px;
+  height:60px;
+  width: 120px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label.check {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+    color: #969696;
+    border: 1px solid #a3a3a3;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + label.check {
+    border: 1px solid #4db4e4;
+    background-color: #4db4e4;
+}
+
+input[type="checkbox"] + label.check::before {
+    content: "OFF";
+    position: absolute;
+    top: 4px;
+    left: auto;
+    right: 6px;
+}
+
+input[type="checkbox"]:checked + label.check::before {
+    content: "ON";
+    position: absolute;
+    left: 6px;
+    right: auto;
+    color: #ffffff;
+}
+
+input[type="checkbox"] + label.check > div {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 22px;
+    border: 1px solid #a3a3a3;
+    border-radius: 3px;
+    background-color: #ffffff;
+    transition: 0.2s;
+}
+
+input[type="checkbox"]:checked + label.check > div {
+    border: 1px solid transparent;
+    left: 44px;
+}

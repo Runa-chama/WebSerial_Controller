@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Controller</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<p>Serial Controller</p>
+	<div class="controller">
+	  <div class="control">
+	    <span>LED</span></span><input type="checkbox" id="led_switch"><label class="check" onclick="led();"></label>
+	  </div>
+	  </div>
+		<div class="stick">
+			<div class="stickpad pad1">
+				<div class="bar">
+					<input type="range" value="180" min="0" max="360"id="go_back" class="go_back">
+        </div>
+      </div>
+      </div>
+      <div class="stick">
+        <div class="stickpad pad2">
+          <div class="bar">
+            <input type="range" value="180" min="0" max="360" id="left_right" class="left_right">
+          </div>
+        </div>
+      </div>
+      </div>
+     <!--Connect Dialog-->
+    <div id="cover">
+    <div id="connect_dialog">
+      <button onclick="connect();">Connect</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
